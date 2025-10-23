@@ -13,9 +13,13 @@ Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le a
 */
 
 //Save ul DOM element
+const emailListEl = document.getElementById('email-list')
+console.log(emailListEl);
+
 
 //Stamp 10 random email as li
 //-create variable with li markup
+let emailLi
 //-cycle 10 times to generate the email addresses
 //-Get emails from boolean API
 //-Add email to li
