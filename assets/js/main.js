@@ -45,3 +45,9 @@ function getRandomEmails(markupEl, stampInEl) {
 
 getRandomEmails(emailLi, emailListEl)
     
+//Generate 10 new mails on button click
+const buttonEl = document.querySelector('button')
+
+buttonEl.addEventListener('click', () => {
+    getRandomEmails(emailLi, emailListEl)
+})
