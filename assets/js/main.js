@@ -21,19 +21,27 @@ console.log(emailListEl);
 //-create variable with li markup
 let emailLi
 
-//-Create varible wuth api URL
-const randomEmail = 'https://flynn.boolean.careers/exercises/api/random/mail'
 
-//-cycle 10 times to generate the email addresses
-for (let i = 1; i <= 10; i++) {
-    //-Get emails from boolean API
-    fetch(randomEmail)
+//Trasform into a function
+function getRandomEmails(markupEl, stampInEl) {
+
+    //-Create varible wuth api URL
+    const randomEmail = 'https://flynn.boolean.careers/exercises/api/random/mail'
+    
+    //-cycle 10 times to generate the email addresses
+    for (let i = 1; i <= 10; i++) {
+        //-Get emails from boolean API
+        fetch(randomEmail)
         .then(response => response.json())
         .then(data => {
             console.log(data.response);
             //-Add email to li
-            emailLi = `<li>${data.response}</li>`
+            markupEl = `<li>${data.response}</li>`
             //-Stamp result in the ul
-            emailListEl.innerHTML += emailLi
+            stampInEl.innerHTML += markupEl
         })
+    }
 }
+
+getRandomEmails(emailLi, emailListEl)
+    
