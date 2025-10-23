@@ -20,7 +20,23 @@ console.log(emailListEl);
 //Stamp 10 random email as li
 //-create variable with li markup
 let emailLi
+
+//-Create varible wuth api URL
+const randomEmail = 'https://flynn.boolean.careers/exercises/api/random/mail'
+
 //-cycle 10 times to generate the email addresses
+for (let i = 1; i <= 10; i++) {
+
+    
+}
 //-Get emails from boolean API
+fetch(randomEmail)
+.then(response => response.json())
+.then(data => {
+    console.log(data);
+    
+   
+})
+
 //-Add email to li
 //-Stamp result in the ul
