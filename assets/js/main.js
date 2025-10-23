@@ -49,5 +49,6 @@ getRandomEmails(emailLi, emailListEl)
 const buttonEl = document.querySelector('button')
 
 buttonEl.addEventListener('click', () => {
+    emailListEl.innerHTML = ''
     getRandomEmails(emailLi, emailListEl)
 })
