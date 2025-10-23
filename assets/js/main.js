@@ -36,7 +36,7 @@ function getRandomEmails(markupEl, stampInEl) {
         .then(data => {
             console.log(data.response);
             //-Add email to li
-            markupEl = `<li>${data.response}</li>`
+            markupEl = `<li class="list-group-item">${data.response}</li>`
             //-Stamp result in the ul
             stampInEl.innerHTML += markupEl
         })
